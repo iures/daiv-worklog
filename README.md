@@ -1,6 +1,9 @@
 # Daiv Worklog
 
-A plugin for the daiv CLI tool.
+A plugin for the [daiv](https://github.com/iures/daiv) CLI tool that helps you track and manage your work activities. This plugin provides seamless integration with daiv's standup functionality, allowing you to log your work and generate standup reports.
+
+## Features
+- Adds context to daiv's standup command
 
 ## Installation
 
@@ -32,11 +35,21 @@ daiv plugin install iures/daiv-worklog
 
 This plugin requires the following configuration:
 
-- worklog.directory: The directory where the worklog files are stored.
+- `worklog.directory`: The directory where the worklog files are stored.
 
 You can configure these settings when you first run daiv after installing the plugin.
 
 ## Usage
 
-After installation, the plugin will be automatically loaded when you start daiv.
+After installation, the plugin will be automatically loaded when you run `daiv standup`.
+
+### Standup Context
+
+The plugin integrates with daiv's standup functionality, allowing you to generate reports of your work items within specific time ranges.
+In order to do this, it looks for any files created in the configured worklog directory and uses the file modification time to determine when the work was logged.
+The plugin then reads the contents of the file and adds to the standup context.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
 
