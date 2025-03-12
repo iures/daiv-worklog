@@ -3,7 +3,7 @@
 A plugin for the [daiv](https://github.com/iures/daiv) CLI tool that helps you track and manage your work activities. This plugin provides seamless integration with daiv's standup functionality, allowing you to log your work and generate standup reports.
 
 ## Features
-- Adds context to daiv's standup command
+Reads all the files from the configured worklog directory, if they were creted or modified in the specified time range, it will add the contents of the file to the standup context.
 
 ## Installation
 
